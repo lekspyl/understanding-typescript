@@ -1,11 +1,14 @@
-const person = {
-    name: 'Oleksandr',
-    age: 30,
-    hobbies: ['Dancing', 'Driving', 'Dying']
-};
+let userInput: unknown;
+let userName: string;
 
-console.log(`${person.name} has these hobbies: ${person.hobbies}`);
-
-for (const hobby of person.hobbies){
-    console.log(hobby.toUpperCase())
+userInput = 5;
+userInput = 'Max'
+if (typeof userInput === 'string') {
+    userName = userInput;
 }
+
+function generateError(message: string, code: number): never {
+    throw { message: message, errorCode: code };
+}
+
+generateError('An error occurred', 500)
